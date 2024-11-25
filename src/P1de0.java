@@ -2,21 +2,19 @@ import java.util.Scanner;
 
 public class P1de0 {
     public static void main(String[] args) {
-        double C1, C2, C3, C4, S, P;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese el valor C1: ");
-        C1 = sc.nextDouble();
-        System.out.println("Ingrese el valor C2: ");
-        C2 = sc.nextDouble();
-        System.out.println("Ingrese el valor C3: ");
-        C3 = sc.nextDouble();
-        System.out.println("Ingrese el valor C4: ");
-        C4 = sc.nextDouble();
+        System.out.println("¿Cuántos números desea ingresar?");
+        int n = sc.nextInt();
+        double suma = 0;
 
-        S = (C1 + C2 + C3 + C4);
-        P = S / 4;
-        System.out.println("El valor promedio es: " + P);
+        for (int i = 1; i <= n; i++) {
+            System.out.println("Ingrese el número " + i + ": ");
+            suma += sc.nextDouble();
+        }
 
+        double promedio = suma / n;
+        System.out.println("El valor promedio es: " + promedio);
         sc.close();
     }
 }
+
